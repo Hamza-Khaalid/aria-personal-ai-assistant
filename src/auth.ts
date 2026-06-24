@@ -5,7 +5,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const SCOPES = ["https://www.googleapis.com/auth/calendar"];
+const SCOPES = [
+  "https://www.googleapis.com/auth/calendar",
+  "https://www.googleapis.com/auth/tasks",
+  "https://www.googleapis.com/auth/gmail.send",
+  "https://www.googleapis.com/auth/gmail.readonly",
+];
+
 const CREDENTIALS_PATH = process.env.GOOGLE_CREDENTIALS_PATH || "./credentials.json";
 const TOKEN_PATH = process.env.GOOGLE_TOKEN_PATH || "./token.json";
 const REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob";
